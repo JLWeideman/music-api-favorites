@@ -8,9 +8,12 @@
   },
   "main": "server.js",
   "scripts": {    
-    "start": "node server.js",
-    "server": "nodemon server.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "client-install": "npm install --prefix front_end",    
+    "start": "node index.js",    
+    "server": "nodemon index.js",    
+    "client": "npm start --prefix front_end",    
+    "dev": "concurrently \"npm run server\" \"npm run front_end\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix front_end && npm run build --prefix front_end"
   },
   "author": "",
   "license": "ISC",
@@ -37,4 +40,13 @@
     "heroku",
     "express"
   ]
+}
+
+
+"scripts": {    
+  "client-install": "npm install --prefix client",    
+  "start": "node index.js",    
+  "server": "nodemon index.js",    
+  "client": "npm start --prefix client",    
+  "dev": "concurrently \"npm run server\" \"npm run client\"",
 }

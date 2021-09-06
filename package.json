@@ -2,12 +2,15 @@
   "name": "task-21",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "v14.17.0",
+    "npm": "7.22.0"
+  },
   "main": "server.js",
   "scripts": {    
     "start": "node server.js",
     "server": "nodemon server.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix front_end && npm run build --prefix front_end"
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
@@ -25,8 +28,13 @@
     "chai": "^4.3.4",
     "mocha": "^9.1.0"
   },
-  "engines": {
-    "node": "v14.17.0",
-    "npm": "7.22.0"
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JLWeideman/music_favorites"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ]
 }

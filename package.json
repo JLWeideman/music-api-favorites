@@ -9,8 +9,8 @@
   "main": "server.js",
   "scripts": {    
     "client-install": "npm install --prefix front_end",    
-    "start": "node index.js",    
-    "server": "nodemon index.js",    
+    "start": "node app.js",    
+    "server": "nodemon server.js",    
     "client": "npm start --prefix front_end",    
     "dev": "concurrently \"npm run server\" \"npm run front_end\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm install && npm run build"

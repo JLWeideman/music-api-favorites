@@ -11,7 +11,6 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan('dev'));
 app.use(helmet());
-app.use(express.static(path.join(__dirname, 'front_end/build')));
 
 // Routes
 app.use('/api', routes);
@@ -29,3 +28,6 @@ app.get('*', (req, res) => {  res.sendFile(path.join(__dirname + '/client/public
 app.listen(PORT, () => {
     console.log('Listen on port : ', PORT);
 })
+
+
+module.exports = app;
